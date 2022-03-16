@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<h1>New To-Do List</h1>
+
+<form method="post" action="/todo">
+
+    <div class="form-group">
+        <label>Title</label>
+        <input name="title" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Content</label>
+        <br>
+        <input name="textField" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <input name="description" type="text" class="form-control">
+    </div>
+<br>
+<br>
+    <button type="submit" class="btn btn-primary">Create To-Do</button>
+
+</form>

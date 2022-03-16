@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<%- include('./partials/header') %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Salman's App</h1>
+    <p>Welcome to your Personal Diary App</p>
+    <% if(todos.length == 0) { %> 
+        <h1>Please Create an Entry</h1>
+    <% } else { %> 
+        <% todos.forEach(function(todo) { %>
+        <div>
+          <a href="/todo/<%=todo._id %>"><%=todo.title %></a> 
+          <!-- showing the title^^ -->
+        </div>
+        <%})%>
+    <% } %>
+
+
+
+
+
+
+
   </body>
 </html>
