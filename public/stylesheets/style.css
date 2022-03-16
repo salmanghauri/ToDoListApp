@@ -4,5 +4,8 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #0a0a0a;
+}
+li {
+  list-style: none;
 }

@@ -6,4 +6,5 @@
 <h2>Description</h2> 
     <p><%=todo.description%></p>
 <a href="/todo/edit?id=<%= todo._id %>"><button>Edit</button></a>
+<form action="/todo/delete?_method=DELETE" method="POST"><input type="hidden" name="_id" value="<%= todo._id %>"><button>Delete</button></form>
 </body>

@@ -1,7 +1,8 @@
 const User = require('../models/User');
 const Todo = require('../models/ToDo');
 const moment = require('moment');
-
+let loggedInUser = null
+let todos = []
 async function todoget(req,res) {
     res.render('todo/add')
 }
@@ -14,7 +15,10 @@ async function todopost (req,res) {
     res.redirect('/');
 }
 async function index (req,res) {
-    let todos = await Todo.find({user: req.user.id});
+    if (req.user) {
+     loggedInUser = req.user 
+     todos = await Todo.find({user: loggedInUser._id});
+    }
     res.render('index', {todos});
 }
 async function show (req,res) {
@@ -25,17 +29,13 @@ async function edit (req,res) {
     let todo = await Todo.findById(req.query.id);
     res.render('todo/edit', {todo})
 }
-// async function delete_todo (req,res) {
-//     await Todo.findByIdAndDelete(req.query.id)
-//     res.redirect('/');
-// }
-// function edit (req,res) {
-//     Todo.findById(req.query.id)
-//     .then((todo) => {
-//         res.render("todo/edit", {todo})
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     })
-// }
-module.exports = {todoget, todopost, index, show, edit};
+async function updateToDo (req,res) {
+    console.log(req.body._id);
+   await Todo.findByIdAndUpdate(req.body._id, req.body);
+   res.redirect('/');
+}
+async function delete_todo (req,res) {
+    await Todo.findByIdAndDelete(req.body._id);
+    res.redirect('/');
+}
+module.exports = {todoget, todopost, index, show, edit, updateToDo, delete_todo};
