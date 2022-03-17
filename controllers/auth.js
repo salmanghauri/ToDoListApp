@@ -14,6 +14,11 @@ exports.auth_signup_get = (req,res) => {
 exports.auth_signin_get = (req, res) => {
     res.render("signin");
 }
+//rendering Profile Page - GET
+exports.auth_profile_get = (req,res) => {
+    let user = req.user;
+    res.render("profile", {user});
+}
 
 //Posting Sign up Data - POST
 exports.auth_signup_post = (req, res) => {

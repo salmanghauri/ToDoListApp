@@ -5,6 +5,7 @@ const authCtrl = require('../controllers/auth');
 
 router.get("/signup", authCtrl.auth_signup_get);
 router.get("/signin", authCtrl.auth_signin_get);
+router.get('/profile', authCtrl.auth_profile_get);
 router.post("/signup", [
     body('firstName').isLength({min : 2}).withMessage("first name must be at least 2 characters long"),
     body('lastName').isLength({min : 2}),

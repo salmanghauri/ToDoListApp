@@ -1,16 +1,31 @@
 <%- include('./partials/header') %>
-  <body>
-    <h1>Salman's App</h1>
-    <p>Welcome to your Personal Diary App</p>
+<body>
+  <div class="container">
+      <br>
+    <h2 class="display-7 text-center">Welcome to your Personal To-Do App</h2>
     <% if(todos.length == 0) { %> 
-        <h1>Please Create an Entry</h1>
-    <% } else { %> 
+      <br>
+      <br>
+        <h3 class="display-10 text-center">Please Create an Entry to Begin</h1>
+  </div>
+    <% } else { %>
+      <table class="table table-dark float-left">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">To-Do List</th>
+          </tr>
+        </thead>
+        <% let number = 1 %>
         <% todos.forEach(function(todo) { %>
-        <div>
-          <a href="/todo/<%=todo._id %>"><%=todo.title %></a> 
-          <!-- showing the title^^ -->
-        </div>
+        <tbody>
+          <tr>
+            <th scope="row"><%= number %></th>
+            <% number+= 1 %>
+          <td><a href="/todo/<%=todo._id %>"><%=todo.title %></a></td>
+          </tr>
         <%})%>
+        </table>
     <% } %>
 
 
@@ -18,6 +33,6 @@
 
 
 
-
+  </div>
   </body>
 </html>

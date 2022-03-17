@@ -1,10 +1,17 @@
 <%- include('../partials/header') %>
+<br>
+<br>
+
 <body>
-<h1><%=todo.title%></h1>
-<h2>Content</h2>
-    <p><%=todo.textField%></p>
-<h2>Description</h2> 
-    <p><%=todo.description%></p>
-<a href="/todo/edit?id=<%= todo._id %>"><button>Edit</button></a>
-<form action="/todo/delete?_method=DELETE" method="POST"><input type="hidden" name="_id" value="<%= todo._id %>"><button>Delete</button></form>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%=todo.title%></h5>
+          <br>
+          <h6 class="card-subtitle mb-2 text-muted"><%=todo.description%></h6>
+          <p class="card-text"><%=todo.textField%></p>
+          <br>
+          <a href="/todo/edit?id=<%= todo._id %>" class="card-link">Edit</a>
+          <form action="/todo/delete?_method=DELETE" method="POST"><input type="hidden" name="_id" value="<%= todo._id %>"><button class="btn btn-danger float-end">Delete</button></form>
+        </div>
+      </div>
 </body>

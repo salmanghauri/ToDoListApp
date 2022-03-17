@@ -4,8 +4,20 @@ body {
 }
 
 a {
-  color: #0a0a0a;
+  color: white;
 }
 li {
   list-style: none;
+}
+.nav-link {
+  color: rgb(247, 245, 245);
+}
+.intro {
+  color: rgb(247, 245, 245);
+}
+.navbar-nav {
+  width: 100%;
+}
+.card-link {
+  color: black;
 }
