@@ -1,13 +1,11 @@
 <%- include('./partials/header') %>
 <br>
-<body>
-  <div class="image-container">
-    <% if(user.profilePicture) { %>
-      <img class="profilepic" src="<%= user.profilePicture %>">
-      <% } %>
-  </div>
-    <div class="container text-center">
+<div>
+    <div class="text-center">
     <div class="card" style="width: 18rem;">
+      <% if(user.profilePicture) { %>
+        <img class="card-img-top img-thumbnail" src="<%= user.profilePicture %>">
+        <% } %>
         <div class="card-body">
           <h5 class="card-title"><%=user.firstName%></h5>
           <br>
@@ -15,5 +13,6 @@
           <br>
         </div>
     </div>
+</div>
 </div>
 </body>
