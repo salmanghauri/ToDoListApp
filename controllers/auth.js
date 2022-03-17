@@ -23,7 +23,11 @@ exports.auth_profile_get = (req,res) => {
 //Posting Sign up Data - POST
 exports.auth_signup_post = (req, res) => {
     let user = new User(req.body);
-    let hash = bcrypt.hashSync(req.body.password, salt)
+    if (req.file) {
+        let imagPath = '/assets/' + req.file.filename;  
+        user.profilePicture = imagPath;
+    };
+    let hash = bcrypt.hashSync(req.body.password, salt);
     user.password = hash;
     user.save()
     .then(()=> {
