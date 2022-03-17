@@ -3,14 +3,14 @@
 <br>
 
 <body>
-    <div class="card" style="width: 18rem;">
+    <div class="card p-3 mb-2 bg-dark text-white" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title"><%=todo.title%></h5>
           <br>
-          <h6 class="card-subtitle mb-2 text-muted"><%=todo.description%></h6>
+          <h6 class="card-subtitle mb-2 text-white"><%=todo.description%></h6>
           <p class="card-text"><%=todo.textField%></p>
           <br>
-          <a href="/todo/edit?id=<%= todo._id %>" class="card-link">Edit</a>
+          <a href="/todo/edit?id=<%= todo._id %>" class="card-link text-white">Edit</a>
           <form action="/todo/delete?_method=DELETE" method="POST"><input type="hidden" name="_id" value="<%= todo._id %>"><button class="btn btn-danger float-end">Delete</button></form>
         </div>
       </div>

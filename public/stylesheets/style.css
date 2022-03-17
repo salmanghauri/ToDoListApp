@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 14 px 'PT Serif', serif;
 }
 
 a {
@@ -11,6 +11,7 @@ li {
 }
 .nav-link {
   color: rgb(247, 245, 245);
+  font-family: Arial, Helvetica, sans-serif
 }
 .intro {
   color: rgb(247, 245, 245);
@@ -20,4 +21,7 @@ li {
 }
 .card-link {
   color: black;
+}
+.index {
+  background-image: "https://wallpaperaccess.com/full/4317847.jpg";
 }
