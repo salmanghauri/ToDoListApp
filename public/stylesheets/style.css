@@ -11,7 +11,7 @@ li {
 }
 .nav-link {
   color: rgb(247, 245, 245);
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 .intro {
   color: rgb(247, 245, 245);
@@ -23,5 +23,6 @@ li {
   color: black;
 }
 .index {
-  background-image: "https://wallpaperaccess.com/full/4317847.jpg";
+  background-image: url("https://wallpaperaccess.com/full/4317847.jpg");
+  height: 1000px;
 }
