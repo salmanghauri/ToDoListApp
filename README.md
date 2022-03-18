@@ -1,4 +1,4 @@
-Your To Do App
+## Your To Do App
 
 Welcome to your to-do list App!
 
@@ -8,7 +8,7 @@ This app was created because I wanted a place for myself to keep track of my dai
 
 Sign up and log in and create your first to-do!
 
-Screenshots
+## Screenshots
 
 ![Home Page](public/assets/home%20page.PNG)
 ---
@@ -18,7 +18,7 @@ Screenshots
 ---
 ---
 
-Technologies Used 
+## Technologies Used 
 
 - HTML
 - CSS
@@ -31,11 +31,11 @@ Technologies Used
 - Multer
 - Connect Flash
 
-Link to App
+## Link to App
 
 ### [Your To-Do App](https://todolistappsei48.herokuapp.com/)
 
-Future Enhancements
+## Future Enhancements
 
 - Allow users to add diary entries.
 - Allow users to edit, and delete diary entries.
