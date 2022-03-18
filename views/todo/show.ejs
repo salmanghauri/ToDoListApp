@@ -2,7 +2,7 @@
 <br>
 <br>
 
-<body>
+<div>
     <div class="card p-3 mb-2 bg-dark text-white" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title"><%=todo.title%></h5>
@@ -14,4 +14,6 @@
           <form action="/todo/delete?_method=DELETE" method="POST"><input type="hidden" name="_id" value="<%= todo._id %>"><button class="btn btn-danger float-end">Delete</button></form>
         </div>
       </div>
+</div>
 </body>
+</main>
