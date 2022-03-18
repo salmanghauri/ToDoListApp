@@ -10,11 +10,11 @@ Sign up and log in and create your first to-do!
 
 Screenshots
 
-![Alt text](https://imgur.com/a/uZyuJ6L)
+![Home Page](public/assets/home%20page.PNG)
 ---
-![Alt text](https://imgur.com/a/JaPlMe3)
+![To-Do's View](public/assets/todo's.PNG)
 ---
-![Alt text](https://imgur.com/a/dFBztFb)
+![To-Do Display](public/assets/todoview.PNG)
 ---
 ---
 
